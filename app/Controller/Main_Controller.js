@@ -1,14 +1,25 @@
 // Main Controller
-module.exports=function(){
+module.exports=class Main_Controller extends Controller{
+	constructor(){
 
+	}
+	index(){
+		console.log("INDEX MAIN??");
+	}
+}
+/*
+module.exports=new function(){
 
-	this.index(){
+	this.call("./Controller.js");
 
+	this.index=function(){
 
+console.log("INDEX MAIN?");
 	};
 
-	this.aaa(){
+	this.aaa=function(){
 
 
 	};
 };
+*/
