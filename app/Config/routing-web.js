@@ -1,8 +1,12 @@
 module.exports={
 	pages:[
-		["/","Main@index"],
-		["/aaa","Main@aaaa"],
-		["/bbb","Main@bbbb"],
-		["/ccc","Aaa@yours"]
-	]
+		["/","main@index"],
+		["/aaa","main@aaaa"],
+		["/bbb","main@bbbb"],
+		["/ccc","aaa@yours"],
+		["/ddd/{:id?}",{controller:"aaa",action:"whois"}]
+	],
+	error:{
+		404:"notfound404",
+	}
 };
