@@ -4,6 +4,8 @@ module.exports={
 		["/aaa/bbbb","main@aabb"],
 		["/aaa","main@aaaa"],
 		["/bbb","main@bbbb"],
+		["/bbb2","main@bbbb2"],
+		["/bbb3","main@bbbb3"],
 		["/ccc","aaa@yours"],
 		["/ddd/{:id?}",{controller:"aaa",action:"whois"}],
 		["/eee/{:id}/{:id2?}",{controller:"aaa",action:"e!"}],

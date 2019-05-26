@@ -35,4 +35,20 @@ module.exports=class Main_Controller extends Controller{
 		return "<style>body{ background:#444;color:#fff; }</style>AAA DESUYO.";
 
 	}
+	bbbb(){
+		this.render="bbbb-sub";
+	}
+	aabb(){
+		this.layout=false;
+
+	}
+	bbbb2(){
+		this.render=false;
+		this.setHeader("Content-Type","application/json");
+		return "OK BBBB2";
+
+	}
+	bbbb3(){
+		this.redirect("https://www.yahoo.co.jp/");
+	}
 }
