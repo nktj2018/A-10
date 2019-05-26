@@ -1,0 +1,11 @@
+<div>
+	---sub aaa.view----<br>
+	<p><%= echo("4404040"); %></p>
+
+	<div style="margin-left:20px;">
+		<%=
+		set("8822val","8822valの値が入る");
+		include("88822.view"); %>
+	</div>
+	----------------
+</div>
