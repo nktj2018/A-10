@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-
 <h1>WELCOME TO A-10.</h1>
 <p>pre version.</p>
 
-</body>
-</html>
+<%= echo("Echo TextText....."); %>
+<br>
+<%= echo(get("value001")); %>
+
+<%=
+set("block_name","BLOCK-001");
+echo(setElement("part_block1")); %>

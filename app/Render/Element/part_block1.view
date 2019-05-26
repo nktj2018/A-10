@@ -1,0 +1,5 @@
+<div style="border:solid 1px #999;padding:20px;margin-bottom:20px;">
+	<p>Element Block</p>
+	<p>name:<%= echo(get("block_name")); %>
+	<p>samplesamplesamplesamplesamplesamplesample...</p>
+</div>	
