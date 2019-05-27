@@ -15,7 +15,7 @@
 <p><a href="/aaa/bbbb">aaa/bbbb</a></p>
 <br><br>
 <p><a href="/ccc">ccc</a></p>
-<p><a href="/ddd">ddd</a></p>
+<p><a href="/ddd/2556">ddd</a></p>
 
 <%=
 set("block_name","BLOCK-001");
