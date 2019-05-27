@@ -11,7 +11,14 @@ module.exports={
 		["/bbb6","Main/bbb6-view"],
 		["/ccc/{:id?}",{controller:"aaa",action:"ccc"}],
 		["/ddd/{:id}/{:id2?}",{controller:"aaa",action:"ddd"}],
-		["/eee/{:id}/ggg/{:id2?}",{controller:"aaa",action:"eee"}]
+		["/eee/{:id}/ggg/{:id2?}",{controller:"aaa",action:"eee"}],
+		["/fff",function(){
+			return "fff OK!";
+		}],
+		["/ggg/{:number}",function(number){
+			return "ggg is "+number;
+		}],
+
 	],
 	error:{
 		404:"notfound404",
