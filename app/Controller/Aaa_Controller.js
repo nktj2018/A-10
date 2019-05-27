@@ -37,7 +37,7 @@ module.exports=class Aaa_Controller extends Controller{
 	}
 	ddd(id,id2=null){
 		this.render=false;
-		console.log(this);
+
 		var str="";
 		str+=this.Aaaa.text_method()+"<br>";
 		str+=this.Bbbb.text_method()+"<br>";
