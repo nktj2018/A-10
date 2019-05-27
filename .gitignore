@@ -1,1 +1,3 @@
 /*.lnk
+/testsample/orm/node_modules
+/testsample/orm/package-lock.json
