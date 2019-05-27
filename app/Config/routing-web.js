@@ -6,10 +6,12 @@ module.exports={
 		["/bbb","main@bbbb"],
 		["/bbb2","main@bbbb2"],
 		["/bbb3","main@bbbb3"],
-		["/ccc","aaa@yours"],
-		["/ddd/{:id?}",{controller:"aaa",action:"whois"}],
-		["/eee/{:id}/{:id2?}",{controller:"aaa",action:"e!"}],
-		["/fff/{:id}/ggg/{:id2?}",{controller:"aaa",action:"e!"}]
+		["/bbb4/{:id?}","main@bbbb4"],
+		["/bbb5/{:id}/{:id2?}","main@bbbb5"],
+		["/bbb6","Main/bbb6-view"],
+		["/ccc/{:id?}",{controller:"aaa",action:"ccc"}],
+		["/ddd/{:id}/{:id2?}",{controller:"aaa",action:"ddd"}],
+		["/eee/{:id}/ggg/{:id2?}",{controller:"aaa",action:"eee"}]
 	],
 	error:{
 		404:"notfound404",

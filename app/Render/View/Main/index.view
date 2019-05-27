@@ -9,7 +9,13 @@
 <p><a href="/bbb">bbb</a></p>
 <p><a href="/bbb2">bbb2</a></p>
 <p><a href="/bbb3">bbb3(yahoo page redirect...)</a></p>
+<p><a href="/bbb4/50">bbb4/50</a></p>
+<p><a href="/bbb5/123/456">bbb5/123/456</a></p>
+<p><a href="/bbb6">bbb6</a></p>
 <p><a href="/aaa/bbbb">aaa/bbbb</a></p>
+<br><br>
+<p><a href="/ccc">ccc</a></p>
+<p><a href="/ddd">ddd</a></p>
 
 <%=
 set("block_name","BLOCK-001");

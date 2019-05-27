@@ -51,4 +51,15 @@ module.exports=class Main_Controller extends Controller{
 	bbbb3(){
 		this.redirect("https://www.yahoo.co.jp/");
 	}
+	bbbb4(id){
+		this.render=false;
+		return "BBBB4 PAGE ID="+id;
+	}
+	bbbb5(id,id2){
+		this.render=false;
+		console.log(this.request);
+		return "BBBB4 PAGE ID="+id+" ID2="+id2;
+
+		
+	}
 }
