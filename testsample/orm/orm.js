@@ -5,7 +5,6 @@ module.exports=class orm{
 	constructor(option){
 
 		if(option.type=="mysql"){
-
 			var sequelize = new Sequelize(option.dbName,option.username,option.password,{
 				dialect:'mysql',
 				host:option.host,
@@ -19,8 +18,10 @@ module.exports=class orm{
 			});
 		}
 
-		sequelize.query('select * from test',null,{raw:true}).success(function(rows) {
+		sequelize.query('select * from table01').then(function(rows){
+
 		  console.log(rows);
+
 		});
 
 	}

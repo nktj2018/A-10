@@ -5,5 +5,5 @@ var orms=new orm({
 	port:3306,
 	username:"root",
 	password:"",
-	dbName:""
+	dbName:"d0001"
 });
