@@ -7,3 +7,8 @@ var orms=new orm({
 	password:"",
 	dbName:"d0001"
 });
+
+orms.query("select * from table01").then(function(res){
+	console.log(res);
+	return;
+});
