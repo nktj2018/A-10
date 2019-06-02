@@ -1,15 +1,18 @@
-var Sequelize = require('sequelize');
+var mysql = require("mysql");
 
 module.exports=class orm{
 
 	constructor(option){
 
 		if(option.type=="mysql"){
-			this.sequelize = new Sequelize(option.dbName,option.username,option.password,{
-				dialect:'mysql',
+			this.mysql=mysql.createConnection({
 				host:option.host,
-				port:option.port
+				user:option.username,
+				password:option.password,
+				database:option.dbName,
+				port:option.port,
 			});
+
 		}
 		else if(option.type=="sqlite"){
 			this.sequelize = new Sequelize(option.dbName,"","",{
@@ -22,9 +25,20 @@ module.exports=class orm{
 	query(query_code){
 		var cont=this;
 		return new Promise(function(resolve){
-			cont.sequelize.query(query_code,{type:cont.sequelize.QueryTypes.SELECT}).then(function(res,metadata){
-				resolve(res);
+			cont.mysql.query(query_code,function(err,res,fields){
+				if(err){
+					console.log(err);
+					resolve(null);
+				}
+				else
+				{
+					resolve(res);
+				}
 			});
 		});
+	}
+	where(name,value){
+
+
 	}
 };
