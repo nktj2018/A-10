@@ -1,11 +1,14 @@
 var mysql = require("mysql");
+var sqlite=require("sqlite3");
 
 module.exports=class orm{
 
 	constructor(option){
 
+		this.type=option.type;
+
 		if(option.type=="mysql"){
-			this.mysql=mysql.createConnection({
+			this.dba=mysql.createConnection({
 				host:option.host,
 				user:option.username,
 				password:option.password,
@@ -15,26 +18,40 @@ module.exports=class orm{
 
 		}
 		else if(option.type=="sqlite"){
-			this.sequelize = new Sequelize(option.dbName,"","",{
-				dialect:'sqlite',
-				storage:option.dbFile
-			});
+			this.dba =new sqlite.Database(option.dbName);
 		}
 
 	}
 	query(query_code){
 		var cont=this;
 		return new Promise(function(resolve){
-			cont.mysql.query(query_code,function(err,res,fields){
-				if(err){
-					console.log(err);
-					resolve(null);
-				}
-				else
-				{
-					resolve(res);
-				}
-			});
+			if(cont.type=="mysql"){
+				cont.dba.query(query_code,function(err,res,fields){
+					if(err){
+						console.log(err);
+						resolve(null);
+					}
+					else
+					{
+						resolve(res);
+					}
+				});
+			}
+			else if(cont.type=="sqlite"){
+				cont.dba.all(query_code, (err, row) => {
+    				if(err){
+						return reject(err);
+					}
+					else
+					{
+						var result=[];
+			            row.forEach(row => {
+            				result.push(row)
+						});
+						resolve(result);
+					}
+				});
+			}
 		});
 	}
 	where(name,value){
